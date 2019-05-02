@@ -1,0 +1,654 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1480A8E12272F3A8000DD749 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1480A8E02272F3A8000DD749 /* AppDelegate.swift */; };
+		1480A8E32272F3A8000DD749 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1480A8E22272F3A8000DD749 /* ViewController.swift */; };
+		1480A8E62272F3A8000DD749 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1480A8E42272F3A8000DD749 /* Main.storyboard */; };
+		1480A8E82272F3A9000DD749 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1480A8E72272F3A9000DD749 /* Assets.xcassets */; };
+		1480A8EB2272F3A9000DD749 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1480A8E92272F3A9000DD749 /* LaunchScreen.storyboard */; };
+		1480A8F32272F570000DD749 /* fitchAppleAccount.p12 in Resources */ = {isa = PBXBuildFile; fileRef = 1480A8F22272F570000DD749 /* fitchAppleAccount.p12 */; };
+		1480A8FB22769952000DD749 /* SecurityPracticeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1480A8FA22769952000DD749 /* SecurityPracticeTests.swift */; };
+		1480A903227699A2000DD749 /* CertificatesStorageKeyChainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1480A902227699A2000DD749 /* CertificatesStorageKeyChainTests.swift */; };
+		1480A905227699BC000DD749 /* www.apple.com.cer in Resources */ = {isa = PBXBuildFile; fileRef = 1480A904227699BC000DD749 /* www.apple.com.cer */; };
+		1480A90722769FEC000DD749 /* P12FileStorageAndParseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1480A90622769FEC000DD749 /* P12FileStorageAndParseTests.swift */; };
+		1480A90822769FF2000DD749 /* fitchAppleAccount.p12 in Resources */ = {isa = PBXBuildFile; fileRef = 1480A8F22272F570000DD749 /* fitchAppleAccount.p12 */; };
+		1480A90E22782F28000DD749 /* SecTrustTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1480A90D22782F28000DD749 /* SecTrustTests.swift */; };
+		1480A92A2278396E000DD749 /* expired.badssl.com-intermediate-ca-1.cer in Resources */ = {isa = PBXBuildFile; fileRef = 1480A9112278396E000DD749 /* expired.badssl.com-intermediate-ca-1.cer */; };
+		1480A92B2278396E000DD749 /* expired.badssl.com-intermediate-ca-2.cer in Resources */ = {isa = PBXBuildFile; fileRef = 1480A9122278396E000DD749 /* expired.badssl.com-intermediate-ca-2.cer */; };
+		1480A92C2278396E000DD749 /* expired.badssl.com-root-ca.cer in Resources */ = {isa = PBXBuildFile; fileRef = 1480A9132278396E000DD749 /* expired.badssl.com-root-ca.cer */; };
+		1480A92D2278396E000DD749 /* expired.badssl.com-leaf.cer in Resources */ = {isa = PBXBuildFile; fileRef = 1480A9142278396E000DD749 /* expired.badssl.com-leaf.cer */; };
+		1480A92E2278396E000DD749 /* alamofire-signing-ca2.cer in Resources */ = {isa = PBXBuildFile; fileRef = 1480A9162278396E000DD749 /* alamofire-signing-ca2.cer */; };
+		1480A92F2278396E000DD749 /* alamofire-signing-ca1.cer in Resources */ = {isa = PBXBuildFile; fileRef = 1480A9172278396E000DD749 /* alamofire-signing-ca1.cer */; };
+		1480A9302278396E000DD749 /* signed-by-ca2.cer in Resources */ = {isa = PBXBuildFile; fileRef = 1480A9182278396E000DD749 /* signed-by-ca2.cer */; };
+		1480A9312278396E000DD749 /* signed-by-ca1.cer in Resources */ = {isa = PBXBuildFile; fileRef = 1480A9192278396E000DD749 /* signed-by-ca1.cer */; };
+		1480A9322278396E000DD749 /* missing-dns-name-and-uri.cer in Resources */ = {isa = PBXBuildFile; fileRef = 1480A91A2278396E000DD749 /* missing-dns-name-and-uri.cer */; };
+		1480A9332278396E000DD749 /* wildcard.alamofire.org.cer in Resources */ = {isa = PBXBuildFile; fileRef = 1480A91B2278396E000DD749 /* wildcard.alamofire.org.cer */; };
+		1480A9342278396E000DD749 /* test.alamofire.org.cer in Resources */ = {isa = PBXBuildFile; fileRef = 1480A91C2278396E000DD749 /* test.alamofire.org.cer */; };
+		1480A9352278396E000DD749 /* alamofire-root-ca.cer in Resources */ = {isa = PBXBuildFile; fileRef = 1480A91D2278396E000DD749 /* alamofire-root-ca.cer */; };
+		1480A9362278396E000DD749 /* valid-uri.cer in Resources */ = {isa = PBXBuildFile; fileRef = 1480A91E2278396E000DD749 /* valid-uri.cer */; };
+		1480A9372278396E000DD749 /* multiple-dns-names.cer in Resources */ = {isa = PBXBuildFile; fileRef = 1480A91F2278396E000DD749 /* multiple-dns-names.cer */; };
+		1480A9382278396E000DD749 /* expired.cer in Resources */ = {isa = PBXBuildFile; fileRef = 1480A9202278396E000DD749 /* expired.cer */; };
+		1480A9392278396E000DD749 /* valid-dns-name.cer in Resources */ = {isa = PBXBuildFile; fileRef = 1480A9212278396E000DD749 /* valid-dns-name.cer */; };
+		1480A93A2278396E000DD749 /* certPEM.cer in Resources */ = {isa = PBXBuildFile; fileRef = 1480A9232278396E000DD749 /* certPEM.cer */; };
+		1480A93B2278396E000DD749 /* randomGibberish.crt in Resources */ = {isa = PBXBuildFile; fileRef = 1480A9242278396E000DD749 /* randomGibberish.crt */; };
+		1480A93C2278396E000DD749 /* certDER.der in Resources */ = {isa = PBXBuildFile; fileRef = 1480A9252278396E000DD749 /* certDER.der */; };
+		1480A93D2278396E000DD749 /* keyDER.der in Resources */ = {isa = PBXBuildFile; fileRef = 1480A9262278396E000DD749 /* keyDER.der */; };
+		1480A93E2278396E000DD749 /* certDER.cer in Resources */ = {isa = PBXBuildFile; fileRef = 1480A9272278396E000DD749 /* certDER.cer */; };
+		1480A93F2278396E000DD749 /* certPEM.crt in Resources */ = {isa = PBXBuildFile; fileRef = 1480A9282278396E000DD749 /* certPEM.crt */; };
+		1480A9402278396E000DD749 /* certDER.crt in Resources */ = {isa = PBXBuildFile; fileRef = 1480A9292278396E000DD749 /* certDER.crt */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1480A8FD22769952000DD749 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1480A8D52272F3A8000DD749 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1480A8DC2272F3A8000DD749;
+			remoteInfo = SecurityPractice;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1480A8DD2272F3A8000DD749 /* SecurityPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SecurityPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1480A8E02272F3A8000DD749 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1480A8E22272F3A8000DD749 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1480A8E52272F3A8000DD749 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1480A8E72272F3A9000DD749 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1480A8EA2272F3A9000DD749 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1480A8EC2272F3A9000DD749 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1480A8F22272F570000DD749 /* fitchAppleAccount.p12 */ = {isa = PBXFileReference; lastKnownFileType = file; path = fitchAppleAccount.p12; sourceTree = "<group>"; };
+		1480A8F822769952000DD749 /* SecurityPracticeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SecurityPracticeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1480A8FA22769952000DD749 /* SecurityPracticeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityPracticeTests.swift; sourceTree = "<group>"; };
+		1480A8FC22769952000DD749 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1480A902227699A2000DD749 /* CertificatesStorageKeyChainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificatesStorageKeyChainTests.swift; sourceTree = "<group>"; };
+		1480A904227699BC000DD749 /* www.apple.com.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = www.apple.com.cer; sourceTree = "<group>"; };
+		1480A90622769FEC000DD749 /* P12FileStorageAndParseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = P12FileStorageAndParseTests.swift; sourceTree = "<group>"; };
+		1480A90D22782F28000DD749 /* SecTrustTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecTrustTests.swift; sourceTree = "<group>"; };
+		1480A9112278396E000DD749 /* expired.badssl.com-intermediate-ca-1.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = "expired.badssl.com-intermediate-ca-1.cer"; sourceTree = "<group>"; };
+		1480A9122278396E000DD749 /* expired.badssl.com-intermediate-ca-2.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = "expired.badssl.com-intermediate-ca-2.cer"; sourceTree = "<group>"; };
+		1480A9132278396E000DD749 /* expired.badssl.com-root-ca.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = "expired.badssl.com-root-ca.cer"; sourceTree = "<group>"; };
+		1480A9142278396E000DD749 /* expired.badssl.com-leaf.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = "expired.badssl.com-leaf.cer"; sourceTree = "<group>"; };
+		1480A9162278396E000DD749 /* alamofire-signing-ca2.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = "alamofire-signing-ca2.cer"; sourceTree = "<group>"; };
+		1480A9172278396E000DD749 /* alamofire-signing-ca1.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = "alamofire-signing-ca1.cer"; sourceTree = "<group>"; };
+		1480A9182278396E000DD749 /* signed-by-ca2.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = "signed-by-ca2.cer"; sourceTree = "<group>"; };
+		1480A9192278396E000DD749 /* signed-by-ca1.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = "signed-by-ca1.cer"; sourceTree = "<group>"; };
+		1480A91A2278396E000DD749 /* missing-dns-name-and-uri.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = "missing-dns-name-and-uri.cer"; sourceTree = "<group>"; };
+		1480A91B2278396E000DD749 /* wildcard.alamofire.org.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = wildcard.alamofire.org.cer; sourceTree = "<group>"; };
+		1480A91C2278396E000DD749 /* test.alamofire.org.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = test.alamofire.org.cer; sourceTree = "<group>"; };
+		1480A91D2278396E000DD749 /* alamofire-root-ca.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = "alamofire-root-ca.cer"; sourceTree = "<group>"; };
+		1480A91E2278396E000DD749 /* valid-uri.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = "valid-uri.cer"; sourceTree = "<group>"; };
+		1480A91F2278396E000DD749 /* multiple-dns-names.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = "multiple-dns-names.cer"; sourceTree = "<group>"; };
+		1480A9202278396E000DD749 /* expired.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = expired.cer; sourceTree = "<group>"; };
+		1480A9212278396E000DD749 /* valid-dns-name.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = "valid-dns-name.cer"; sourceTree = "<group>"; };
+		1480A9232278396E000DD749 /* certPEM.cer */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = certPEM.cer; sourceTree = "<group>"; };
+		1480A9242278396E000DD749 /* randomGibberish.crt */ = {isa = PBXFileReference; lastKnownFileType = file; path = randomGibberish.crt; sourceTree = "<group>"; };
+		1480A9252278396E000DD749 /* certDER.der */ = {isa = PBXFileReference; lastKnownFileType = file; path = certDER.der; sourceTree = "<group>"; };
+		1480A9262278396E000DD749 /* keyDER.der */ = {isa = PBXFileReference; lastKnownFileType = file; path = keyDER.der; sourceTree = "<group>"; };
+		1480A9272278396E000DD749 /* certDER.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = certDER.cer; sourceTree = "<group>"; };
+		1480A9282278396E000DD749 /* certPEM.crt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = certPEM.crt; sourceTree = "<group>"; };
+		1480A9292278396E000DD749 /* certDER.crt */ = {isa = PBXFileReference; lastKnownFileType = file; path = certDER.crt; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1480A8DA2272F3A8000DD749 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1480A8F522769952000DD749 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1480A8D42272F3A8000DD749 = {
+			isa = PBXGroup;
+			children = (
+				1480A8DF2272F3A8000DD749 /* SecurityPractice */,
+				1480A8F922769952000DD749 /* SecurityPracticeTests */,
+				1480A8DE2272F3A8000DD749 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1480A8DE2272F3A8000DD749 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1480A8DD2272F3A8000DD749 /* SecurityPractice.app */,
+				1480A8F822769952000DD749 /* SecurityPracticeTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1480A8DF2272F3A8000DD749 /* SecurityPractice */ = {
+			isa = PBXGroup;
+			children = (
+				1480A8E02272F3A8000DD749 /* AppDelegate.swift */,
+				1480A8E22272F3A8000DD749 /* ViewController.swift */,
+				1480A8F22272F570000DD749 /* fitchAppleAccount.p12 */,
+				1480A8E42272F3A8000DD749 /* Main.storyboard */,
+				1480A8E72272F3A9000DD749 /* Assets.xcassets */,
+				1480A8E92272F3A9000DD749 /* LaunchScreen.storyboard */,
+				1480A8EC2272F3A9000DD749 /* Info.plist */,
+			);
+			path = SecurityPractice;
+			sourceTree = "<group>";
+		};
+		1480A8F922769952000DD749 /* SecurityPracticeTests */ = {
+			isa = PBXGroup;
+			children = (
+				1480A90F2278396E000DD749 /* Certificates */,
+				1480A8FA22769952000DD749 /* SecurityPracticeTests.swift */,
+				1480A902227699A2000DD749 /* CertificatesStorageKeyChainTests.swift */,
+				1480A90622769FEC000DD749 /* P12FileStorageAndParseTests.swift */,
+				1480A90D22782F28000DD749 /* SecTrustTests.swift */,
+				1480A904227699BC000DD749 /* www.apple.com.cer */,
+				1480A8FC22769952000DD749 /* Info.plist */,
+			);
+			path = SecurityPracticeTests;
+			sourceTree = "<group>";
+		};
+		1480A90F2278396E000DD749 /* Certificates */ = {
+			isa = PBXGroup;
+			children = (
+				1480A9152278396E000DD749 /* alamofire.org */,
+				1480A9102278396E000DD749 /* expired.badssl.com */,
+				1480A9222278396E000DD749 /* selfSignedAndMalformedCerts */,
+			);
+			path = Certificates;
+			sourceTree = "<group>";
+		};
+		1480A9102278396E000DD749 /* expired.badssl.com */ = {
+			isa = PBXGroup;
+			children = (
+				1480A9112278396E000DD749 /* expired.badssl.com-intermediate-ca-1.cer */,
+				1480A9122278396E000DD749 /* expired.badssl.com-intermediate-ca-2.cer */,
+				1480A9132278396E000DD749 /* expired.badssl.com-root-ca.cer */,
+				1480A9142278396E000DD749 /* expired.badssl.com-leaf.cer */,
+			);
+			path = expired.badssl.com;
+			sourceTree = "<group>";
+		};
+		1480A9152278396E000DD749 /* alamofire.org */ = {
+			isa = PBXGroup;
+			children = (
+				1480A94A22783CBA000DD749 /* Intermediate */,
+				1480A94522783ACD000DD749 /* Leaf */,
+				1480A94322783A1D000DD749 /* Root */,
+			);
+			path = alamofire.org;
+			sourceTree = "<group>";
+		};
+		1480A9222278396E000DD749 /* selfSignedAndMalformedCerts */ = {
+			isa = PBXGroup;
+			children = (
+				1480A9232278396E000DD749 /* certPEM.cer */,
+				1480A9242278396E000DD749 /* randomGibberish.crt */,
+				1480A9252278396E000DD749 /* certDER.der */,
+				1480A9262278396E000DD749 /* keyDER.der */,
+				1480A9272278396E000DD749 /* certDER.cer */,
+				1480A9282278396E000DD749 /* certPEM.crt */,
+				1480A9292278396E000DD749 /* certDER.crt */,
+			);
+			path = selfSignedAndMalformedCerts;
+			sourceTree = "<group>";
+		};
+		1480A94322783A1D000DD749 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				1480A91D2278396E000DD749 /* alamofire-root-ca.cer */,
+			);
+			name = Root;
+			sourceTree = "<group>";
+		};
+		1480A94522783ACD000DD749 /* Leaf */ = {
+			isa = PBXGroup;
+			children = (
+				1480A94822783C5C000DD749 /* Signed by CA1 */,
+				1480A94722783B13000DD749 /* Signed by CA2 */,
+			);
+			name = Leaf;
+			sourceTree = "<group>";
+		};
+		1480A94722783B13000DD749 /* Signed by CA2 */ = {
+			isa = PBXGroup;
+			children = (
+				1480A9202278396E000DD749 /* expired.cer */,
+				1480A91A2278396E000DD749 /* missing-dns-name-and-uri.cer */,
+				1480A9182278396E000DD749 /* signed-by-ca2.cer */,
+				1480A9212278396E000DD749 /* valid-dns-name.cer */,
+				1480A91E2278396E000DD749 /* valid-uri.cer */,
+			);
+			name = "Signed by CA2";
+			sourceTree = "<group>";
+		};
+		1480A94822783C5C000DD749 /* Signed by CA1 */ = {
+			isa = PBXGroup;
+			children = (
+				1480A91F2278396E000DD749 /* multiple-dns-names.cer */,
+				1480A9192278396E000DD749 /* signed-by-ca1.cer */,
+				1480A91C2278396E000DD749 /* test.alamofire.org.cer */,
+				1480A91B2278396E000DD749 /* wildcard.alamofire.org.cer */,
+			);
+			name = "Signed by CA1";
+			sourceTree = "<group>";
+		};
+		1480A94A22783CBA000DD749 /* Intermediate */ = {
+			isa = PBXGroup;
+			children = (
+				1480A9172278396E000DD749 /* alamofire-signing-ca1.cer */,
+				1480A9162278396E000DD749 /* alamofire-signing-ca2.cer */,
+			);
+			name = Intermediate;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1480A8DC2272F3A8000DD749 /* SecurityPractice */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1480A8EF2272F3A9000DD749 /* Build configuration list for PBXNativeTarget "SecurityPractice" */;
+			buildPhases = (
+				1480A8D92272F3A8000DD749 /* Sources */,
+				1480A8DA2272F3A8000DD749 /* Frameworks */,
+				1480A8DB2272F3A8000DD749 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SecurityPractice;
+			productName = SecurityPractice;
+			productReference = 1480A8DD2272F3A8000DD749 /* SecurityPractice.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1480A8F722769952000DD749 /* SecurityPracticeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1480A8FF22769952000DD749 /* Build configuration list for PBXNativeTarget "SecurityPracticeTests" */;
+			buildPhases = (
+				1480A8F422769952000DD749 /* Sources */,
+				1480A8F522769952000DD749 /* Frameworks */,
+				1480A8F622769952000DD749 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1480A8FE22769952000DD749 /* PBXTargetDependency */,
+			);
+			name = SecurityPracticeTests;
+			productName = SecurityPracticeTests;
+			productReference = 1480A8F822769952000DD749 /* SecurityPracticeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1480A8D52272F3A8000DD749 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "HSBC Holdings plc";
+				TargetAttributes = {
+					1480A8DC2272F3A8000DD749 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					1480A8F722769952000DD749 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 1480A8DC2272F3A8000DD749;
+					};
+				};
+			};
+			buildConfigurationList = 1480A8D82272F3A8000DD749 /* Build configuration list for PBXProject "SecurityPractice" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1480A8D42272F3A8000DD749;
+			productRefGroup = 1480A8DE2272F3A8000DD749 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1480A8DC2272F3A8000DD749 /* SecurityPractice */,
+				1480A8F722769952000DD749 /* SecurityPracticeTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1480A8DB2272F3A8000DD749 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1480A8EB2272F3A9000DD749 /* LaunchScreen.storyboard in Resources */,
+				1480A8E82272F3A9000DD749 /* Assets.xcassets in Resources */,
+				1480A8E62272F3A8000DD749 /* Main.storyboard in Resources */,
+				1480A8F32272F570000DD749 /* fitchAppleAccount.p12 in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1480A8F622769952000DD749 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1480A92C2278396E000DD749 /* expired.badssl.com-root-ca.cer in Resources */,
+				1480A9342278396E000DD749 /* test.alamofire.org.cer in Resources */,
+				1480A9312278396E000DD749 /* signed-by-ca1.cer in Resources */,
+				1480A93A2278396E000DD749 /* certPEM.cer in Resources */,
+				1480A93C2278396E000DD749 /* certDER.der in Resources */,
+				1480A92A2278396E000DD749 /* expired.badssl.com-intermediate-ca-1.cer in Resources */,
+				1480A9362278396E000DD749 /* valid-uri.cer in Resources */,
+				1480A93D2278396E000DD749 /* keyDER.der in Resources */,
+				1480A93B2278396E000DD749 /* randomGibberish.crt in Resources */,
+				1480A92B2278396E000DD749 /* expired.badssl.com-intermediate-ca-2.cer in Resources */,
+				1480A9392278396E000DD749 /* valid-dns-name.cer in Resources */,
+				1480A9332278396E000DD749 /* wildcard.alamofire.org.cer in Resources */,
+				1480A92D2278396E000DD749 /* expired.badssl.com-leaf.cer in Resources */,
+				1480A92E2278396E000DD749 /* alamofire-signing-ca2.cer in Resources */,
+				1480A9302278396E000DD749 /* signed-by-ca2.cer in Resources */,
+				1480A905227699BC000DD749 /* www.apple.com.cer in Resources */,
+				1480A90822769FF2000DD749 /* fitchAppleAccount.p12 in Resources */,
+				1480A9352278396E000DD749 /* alamofire-root-ca.cer in Resources */,
+				1480A93F2278396E000DD749 /* certPEM.crt in Resources */,
+				1480A93E2278396E000DD749 /* certDER.cer in Resources */,
+				1480A9372278396E000DD749 /* multiple-dns-names.cer in Resources */,
+				1480A9322278396E000DD749 /* missing-dns-name-and-uri.cer in Resources */,
+				1480A9402278396E000DD749 /* certDER.crt in Resources */,
+				1480A92F2278396E000DD749 /* alamofire-signing-ca1.cer in Resources */,
+				1480A9382278396E000DD749 /* expired.cer in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1480A8D92272F3A8000DD749 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1480A8E32272F3A8000DD749 /* ViewController.swift in Sources */,
+				1480A8E12272F3A8000DD749 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1480A8F422769952000DD749 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1480A8FB22769952000DD749 /* SecurityPracticeTests.swift in Sources */,
+				1480A90722769FEC000DD749 /* P12FileStorageAndParseTests.swift in Sources */,
+				1480A90E22782F28000DD749 /* SecTrustTests.swift in Sources */,
+				1480A903227699A2000DD749 /* CertificatesStorageKeyChainTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1480A8FE22769952000DD749 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1480A8DC2272F3A8000DD749 /* SecurityPractice */;
+			targetProxy = 1480A8FD22769952000DD749 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1480A8E42272F3A8000DD749 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1480A8E52272F3A8000DD749 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1480A8E92272F3A9000DD749 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1480A8EA2272F3A9000DD749 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1480A8ED2272F3A9000DD749 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1480A8EE2272F3A9000DD749 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1480A8F02272F3A9000DD749 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F8ML633GQS;
+				INFOPLIST_FILE = SecurityPractice/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hsbc.SecurityPractice;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1480A8F12272F3A9000DD749 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F8ML633GQS;
+				INFOPLIST_FILE = SecurityPractice/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hsbc.SecurityPractice;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		1480A90022769952000DD749 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F8ML633GQS;
+				INFOPLIST_FILE = SecurityPracticeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hsbc.SecurityPracticeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SecurityPractice.app/SecurityPractice";
+			};
+			name = Debug;
+		};
+		1480A90122769952000DD749 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F8ML633GQS;
+				INFOPLIST_FILE = SecurityPracticeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hsbc.SecurityPracticeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SecurityPractice.app/SecurityPractice";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1480A8D82272F3A8000DD749 /* Build configuration list for PBXProject "SecurityPractice" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1480A8ED2272F3A9000DD749 /* Debug */,
+				1480A8EE2272F3A9000DD749 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1480A8EF2272F3A9000DD749 /* Build configuration list for PBXNativeTarget "SecurityPractice" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1480A8F02272F3A9000DD749 /* Debug */,
+				1480A8F12272F3A9000DD749 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1480A8FF22769952000DD749 /* Build configuration list for PBXNativeTarget "SecurityPracticeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1480A90022769952000DD749 /* Debug */,
+				1480A90122769952000DD749 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1480A8D52272F3A8000DD749 /* Project object */;
+}
